@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="animal_type_array">
+        <item>Dog</item>
+        <item>Cat</item>
+    </string-array>
+
+    <string-array name="dog_breeds_array">
+        <item>American Bulldog</item>
+        <item>American Pit Bull Terrier</item>
+        <item>Basset Hound</item>
+        <item>Beagle</item>
+        <item>Boxer</item>
+        <item>Chihuahua</item>
+        <item>English Cocker Spaniel</item>
+        <item>English Setter</item>
+        <item>German Shorthaired</item>
+        <item>Great Pyrenees</item>
+        <item>Havanese</item>
+        <item>Japanese Chin</item>
+        <item>Keeshond</item>
+        <item>Leonberger</item>
+        <item>Miniature Pinscher</item>
+        <item>Newfoundland</item>
+        <item>Pomeranian</item>
+        <item>Pug</item>
+        <item>Saint Bernard</item>
+        <item>Samoyed</item>
+        <item>Scottish Terrier</item>
+        <item>Shiba Inu</item>
+        <item>Staffordshire Bull Terrier</item>
+        <item>Wheaten Terrier</item>
+        <item>Yorkshire Terrier</item>
+    </string-array>
+
+    <string-array name="cat_breeds_array">
+        <item>Abyssinian</item>
+        <item>Bengal</item>
+        <item>Birman</item>
+        <item>Bombay</item>
+        <item>British Shorthair</item>
+        <item>Egyptian Mau</item>
+        <item>Maine Coon</item>
+        <item>Persian</item>
+        <item>Ragdoll</item>
+        <item>Russian Blue</item>
+        <item>Siamese</item>
+        <item>Sphynx</item>
+    </string-array>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmartFeeder</string>
+    <string name="hint_memo">Enter your memo here</string>
+    <string name="content_desc_image">Profile Image</string>
+    <string name="content_desc_animal_type">Select the type of the animal</string>
+    <string name="content_desc_breed">Select the breed of the animal</string>
+</resources>
