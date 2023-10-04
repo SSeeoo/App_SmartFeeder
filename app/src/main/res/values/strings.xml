@@ -5,4 +5,5 @@
     <string name="content_desc_animal_type">Select the type of the animal</string>
     <string name="content_desc_breed">Select the breed of the animal</string>
     <string name="motor_notification">모터 구동시 알림기능</string>
+    <string name="save">저장</string>
 </resources>

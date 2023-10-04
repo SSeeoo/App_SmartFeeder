@@ -13,7 +13,7 @@ public class TimeControlActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time_control);
+        setContentView(R.layout.activity_feed_settings);
 
         SeekBar seekBarTimeInterval = findViewById(R.id.seekBarTimeInterval);
         TextView tvTimeInterval = findViewById(R.id.tvTimeInterval);

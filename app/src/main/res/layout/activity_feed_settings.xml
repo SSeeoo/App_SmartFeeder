@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvTimeIntervalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배급 간 시간 간격" />
+
+        <SeekBar
+            android:id="@+id/seekBarTimeInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="60" />
+
+        <TextView
+            android:id="@+id/tvTimeInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0분" />
+
+        <Button
+            android:id="@+id/btnSetTimeInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="간격 설정" />
+
+        <TextView
+            android:id="@+id/tvMotorBlockTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="모터 금지 시간대" />
+
+        <TimePicker
+            android:id="@+id/timePickerStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TimePicker
+            android:id="@+id/timePickerEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSetBlockTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="금지 시간대 설정" />
+    </LinearLayout>
+</ScrollView>

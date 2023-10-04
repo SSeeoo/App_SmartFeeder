@@ -1,21 +1,324 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/settingsIcon"
+    <!-- Top Left View -->
+    <TextView
+        android:id="@+id/topLeftView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_manage"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/font_01_bold"
+        android:background="#b6d139"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="(🐾)SmartFeeder"
+        android:textColor="#00000F"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Menu Icon -->
+    <ImageView
+        android:id="@+id/menuIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#b6d139"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:src="@android:drawable/ic_menu_more"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="4dp"/>
 
-    <!-- 여기에 다른 위젯들과 레이아웃을 추가하세요. -->
+    <!-- Main Image -->
+    <ImageView
+        android:id="@+id/dogImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_dog_image"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLeftView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Pet Care Text -->
+    <TextView
+        android:id="@+id/petCareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_02_semibold"
+        android:gravity="center"
+        android:text="We care\nAbout\nYour pet"
+        android:textColor="#FFFFFF"
+        android:textSize="33sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dogImage"
+        app:layout_constraintEnd_toEndOf="@+id/dogImage"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="@+id/dogImage"
+        app:layout_constraintTop_toTopOf="@+id/dogImage"
+        app:layout_constraintVertical_bias="0.378" />
+
+    <!-- Pet Care Small Text -->
+    <TextView
+        android:id="@+id/petCaresmallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/font_02_semibold"
+        android:gravity="center"
+        android:text="Look for convenience\nIt could save you time."
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/dogImage"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="@+id/dogImage"
+        app:layout_constraintTop_toBottomOf="@+id/petCareText" />
+
+    <!-- Grid Layout -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dogImage">
+
+        <!-- Blocks -->
+        <!-- Block 1 -->
+        <FrameLayout
+            android:id="@+id/profileBlock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:background="#B7D236">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/profile_001" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:text="Profile"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center|bottom"
+                android:text="Edit your pet's profile"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+        </FrameLayout>
+
+        <!-- Block 2 -->
+        <FrameLayout
+            android:id="@+id/timerBlock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:background="#FBEA16">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/timer_002" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:text="Timer"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center|bottom"
+                android:text="Set feeding schedule"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+        </FrameLayout>
+
+
+        <!-- Block 3 -->
+        <FrameLayout
+            android:id="@+id/feedBlock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:background="#F8B318">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/feed_003" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:text="Feed"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center|bottom"
+                android:text="Feed your pet now"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+        </FrameLayout>
+
+        <!-- Block 4 -->
+        <FrameLayout
+            android:id="@+id/cameraBlock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:background="#85C2E7">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/camera_004" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:text="Camera"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center|bottom"
+                android:text="Watch your pets live"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+        </FrameLayout>
+
+        <!-- Block 5 -->
+        <FrameLayout
+            android:id="@+id/historyBlock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:background="#FF4400">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/history_005" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:text="History"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center|bottom"
+                android:text="View feeding history"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+        </FrameLayout>
+        <!-- Block 6 -->
+        <FrameLayout
+            android:id="@+id/settingsBlock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:background="#FFDDC1">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center|top"
+                android:src="@drawable/settings_006" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:text="Settings"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center|bottom"
+                android:text="Change your alert settings"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+        </FrameLayout>
+
+    </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
