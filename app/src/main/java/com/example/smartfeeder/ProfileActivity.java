@@ -13,11 +13,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.widget.DatePicker;
 import java.util.Calendar;
 
 import android.os.Build;
@@ -25,6 +23,9 @@ import android.content.pm.PackageManager;
 
 import android.widget.Toast;
 import java.util.List;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 
 
 public class ProfileActivity extends AppCompatActivity {
@@ -112,13 +113,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         // 프로필 사진 클릭 시 갤러리에서 사진 선택
-        imageViewProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requestStoragePermissionAndPickImage();
-            }
-        });
-
+        imageViewProfile.setOnClickListener(v -> requestStoragePermissionAndPickImage());
 
         // 프로필 정보 저장
         sharedPreferences = getSharedPreferences("ProfileData", MODE_PRIVATE);
@@ -221,7 +216,7 @@ public class ProfileActivity extends AppCompatActivity {
                 // 저장 후 메인 액티비티로 이동
                 Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
                 startActivity(intent);
-                
+
                 // 현재 액티비티 종료
                 finish();
             }

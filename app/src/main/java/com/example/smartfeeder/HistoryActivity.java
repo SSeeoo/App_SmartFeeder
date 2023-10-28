@@ -3,6 +3,8 @@ package com.example.smartfeeder;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,7 +29,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         call.enqueue(new Callback<List<FeedHistory>>() {
             @Override
-            public void onResponse(Call<List<FeedHistory>> call, Response<List<FeedHistory>> response) {
+            public void onResponse(@NonNull Call<List<FeedHistory>> call, @NonNull Response<List<FeedHistory>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<FeedHistory> feedHistories = response.body();
                     ArrayAdapter<FeedHistory> adapter = new ArrayAdapter<>(HistoryActivity.this, android.R.layout.simple_list_item_1, feedHistories);
@@ -36,7 +38,7 @@ public class HistoryActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<FeedHistory>> call, Throwable t) {
+            public void onFailure(@NonNull Call<List<FeedHistory>> call, @NonNull Throwable t) {
                 t.printStackTrace();
             }
         });

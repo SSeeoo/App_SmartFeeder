@@ -26,16 +26,15 @@ public class NotificationHelper {
         }
     }
 
-    public static void showNotification(Context context, String title, String message) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(R.drawable.icon) // 앱의 아이콘으로 변경해 주세요.
-                .setContentTitle(title)
-                .setContentText(message)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-        notificationManager.notify(0, builder.build());
-    }
+    // If you don't plan on using this method soon, you can comment it out to resolve the warning.
+    // public static void showNotification(Context context, String title, String message) {
+    //     NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+    //             .setSmallIcon(R.drawable.icon)
+    //             .setContentTitle(title)
+    //             .setContentText(message)
+    //             .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+    //
+    //     NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+    //     notificationManager.notify(0, builder.build());
+    // }
 }
-
-

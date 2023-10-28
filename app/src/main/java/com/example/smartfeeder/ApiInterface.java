@@ -31,6 +31,22 @@ public interface ApiInterface {
     @POST("set_time_restriction")
     Call<ResponseBody> setTimeRestriction(@Body TimeRestrictionRequest timeRestrictionRequest);
 
+    // 로그인 API 추가
+    @FormUrlEncoded
+    @POST("sign_in")
+    Call<LoginResponse> login(
+            @Field("username") String username,
+            @Field("password") String password
+    );
+
+    @FormUrlEncoded
+    @POST("sign_up")
+    Call<SignUpResponse> signUp(
+            @Field("username") String username,
+            @Field("password") String password,
+            @Field("email") String email
+    );
+
     class IntervalRequest {
         public String user_id;
         public int interval_minutes;
@@ -52,4 +68,55 @@ public interface ApiInterface {
             this.end_time = end_time;
         }
     }
+
+    // 로그인 응답 클래스 추가
+    class LoginResponse {
+        private String status;
+        private String token;
+
+        // status 필드의 getter
+        public String getStatus() {
+            return status;
+        }
+
+        // status 필드의 setter
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        // token 필드의 getter
+        public String getToken() {
+            return token;
+        }
+
+        // token 필드의 setter
+        public void setToken(String token) {
+            this.token = token;
+        }
+    }
+    class SignUpResponse {
+        private String status;
+        private String message;
+
+        // status 필드의 getter
+        public String getStatus() {
+            return status;
+        }
+
+        // status 필드의 setter
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        // message 필드의 getter
+        public String getMessage() {
+            return message;
+        }
+
+        // message 필드의 setter
+        public void setMessage(String message) {
+            this.message = message;
+        }
+    }
+
 }

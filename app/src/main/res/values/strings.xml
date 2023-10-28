@@ -6,4 +6,7 @@
     <string name="content_desc_breed">Select the breed of the animal</string>
     <string name="motor_notification">모터 구동시 알림기능</string>
     <string name="save">저장</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_text">Login</string>
 </resources>

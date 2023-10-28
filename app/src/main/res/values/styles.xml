@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Styles extracted from the CSS -->
+    <style name="LoginTitle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="LoginEditText">
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@android:drawable/editbox_background</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="LoginButton">
+        <item name="android:background">@color/button_blue</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="LoginBackground">
+        <item name="android:background">@color/login_bg</item>
+    </style>
+
+    <style name="LoginInput">
+        <item name="android:background">@color/input_bg</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+</resources>

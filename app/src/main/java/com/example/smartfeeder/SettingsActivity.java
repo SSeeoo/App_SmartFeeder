@@ -1,4 +1,3 @@
-// SettingsActivity.java
 package com.example.smartfeeder;
 
 import android.content.SharedPreferences;
@@ -6,17 +5,17 @@ import android.os.Bundle;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.switchmaterial.SwitchMaterial; // SwitchMaterial import
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class SettingsActivity extends AppCompatActivity {
-    private SwitchMaterial motorNotificationSwitch; // Switch to SwitchMaterial
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        motorNotificationSwitch = findViewById(R.id.motorNotificationSwitch);
+        // motorNotificationSwitch를 로컬 변수로 변경
+        SwitchMaterial motorNotificationSwitch = findViewById(R.id.motorNotificationSwitch);
 
         SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
         boolean isNotificationOn = prefs.getBoolean("motor_notification", false);
