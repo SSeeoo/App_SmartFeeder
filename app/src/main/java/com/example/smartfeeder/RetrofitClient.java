@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private static final String BASE_URL = "http://115.22.175.146:5050"; // ubuntu based aws ec2 server ip
+    private static final String BASE_URL = "http://ec2-54-180-120-1.ap-northeast-2.compute.amazonaws.com:5000"; // ubuntu based aws ec2 server ip
     private static volatile Retrofit retrofit = null;
 
 

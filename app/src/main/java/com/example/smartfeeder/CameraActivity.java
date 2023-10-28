@@ -20,6 +20,6 @@ public class CameraActivity extends AppCompatActivity {
         webSettings.setUseWideViewPort(true);
 
         webView.setWebViewClient(new WebViewClient()); // 경고 메시지 없이 표시
-        webView.loadUrl("http://192.168.0.13:81/stream");
+        webView.loadUrl("http://192.168.35.110:81/stream");
     }
 }
