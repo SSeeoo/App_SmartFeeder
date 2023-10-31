@@ -34,7 +34,7 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:paddingTop="0dp"
-        android:paddingBottom="4dp"/>
+        android:paddingBottom="5dp"/>
 
     <!-- Main Image -->
     <ImageView

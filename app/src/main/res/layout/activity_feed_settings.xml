@@ -30,13 +30,15 @@
             android:id="@+id/btnSetTimeInterval"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="간격 설정" />
+            android:text="간격 설정"
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:id="@+id/tvMotorBlockTimeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="모터 금지 시간대" />
+            android:text="모터 금지 시간대"
+            android:layout_marginBottom="12dp"/>
 
         <TimePicker
             android:id="@+id/timePickerStart"
