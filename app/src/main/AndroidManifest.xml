@@ -31,6 +31,7 @@
 
 <!--        <activity android:name=".LoginActivity" android:exported="true" />-->
 
+        <activity android:name=".SignUpActivity" android:exported="true"/>
         <activity android:name=".ApiInterface" android:exported="true" />
         <activity android:name=".RetrofitClient" android:exported="true" />
         <activity android:name=".SmartFeederApi" android:exported="true" />
