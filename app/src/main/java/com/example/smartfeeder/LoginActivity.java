@@ -32,6 +32,10 @@ public class LoginActivity extends AppCompatActivity {
         usernameInput = findViewById(R.id.usernameInput);
         passwordInput = findViewById(R.id.passwordInput);
 
+        // 로그인 버튼 클릭 리스너 추가
+        findViewById(R.id.loginButton).setOnClickListener(v -> performLogin());
+
+
         findViewById(R.id.signupLink).setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
             startActivity(intent);

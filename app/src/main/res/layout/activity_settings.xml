@@ -3,6 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/notificationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="알림 설정"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
     <!-- SwitchMaterial Widget -->
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/motorNotificationSwitch"

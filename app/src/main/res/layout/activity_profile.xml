@@ -13,6 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="반려동물 등록하기"
+            android:textSize="20sp"
             android:textColor="#FFFFFF"
             android:layout_marginTop="15dp"
             android:layout_gravity="center_horizontal"/>

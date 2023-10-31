@@ -8,6 +8,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="자동 배급 시간 설정"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"/>
+
         <TextView
             android:id="@+id/tvTimeIntervalLabel"
             android:layout_width="wrap_content"
@@ -31,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="간격 설정"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <TextView
             android:id="@+id/tvMotorBlockTimeLabel"

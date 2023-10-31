@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    android:background="@color/background_gray">
+    android:background="@drawable/footprint_transparent">
 
     <TextView
         android:layout_width="wrap_content"
